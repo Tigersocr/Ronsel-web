@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ronsel Correduría de Seguros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ronsel Correduría de Seguros. Asesoramiento independiente en seguros de automóvil, hogar, comunidades, vida, salud y empresas.">
+  <style>
+    :root {
+      --azul: #1f3a4a;
+      --azul-claro: #e8f0f5;
+      --gris: #555555;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      color: var(--gris);
+      line-height: 1.6;
+      background-color: #f7f9fb;
+    }
+
+    header {
+      background-color: var(--blanco);
+      border-bottom: 1px solid #dde3ea;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 46px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--azul);
+    }
+
+    .logo-sub {
+      font-size: 0.8rem;
+      color: var(--gris);
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--gris);
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--azul);
+      color: var(--blanco);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--azul);
+      color: var(--azul);
+      background-color: transparent;
+    }
+
+    .btn-primary:hover,
+    .btn-outline:hover {
+      opacity: 0.9;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 0 40px;
+      background: linear-gradient(135deg, var(--azul-claro), #ffffff);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--azul);
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      background-color: var(--blanco);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid #dde3ea;
+    }
+
+    .hero-side {
+      background-color: var(--blanco);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      font-size: 0.9rem;
+    }
+
+    .hero-side h3 {
+      font-size: 1rem;
+      color: var(--azul);
+      margin-bottom: 8px;
+    }
+
+    .hero-side ul {
+      padding-left: 16px;
+    }
+
+    .hero-side li {
+      margin-bottom: 6px;
+    }
+
+    section {
+      padding: 45px 0;
+      background-color: #f7f9fb;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--blanco);
+    }
+
+    section h2 {
+      font-size: 1.7rem;
+      color: var(--azul);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    section p.section-intro {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    /* Servicios */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background-color: var(--blanco);
+      border-radius: 14px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--azul);
+      margin-bottom: 4px;
+    }
+
+    /* Dos columnas simples */
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    /* Listas */
+    .list-check {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .list-check li::before {
+      content: "✔";
+      margin-right: 6px;
+      color: var(--azul);
+    }
+
+    .list-step {
+      list-style: none;
+      counter-reset: step;
+      padding-left: 0;
+    }
+
+    .list-step li {
+      margin-bottom: 10px;
+    }
+
+    .list-step li::before {
+      counter-increment: step;
+      content: counter(step) ". ";
+      font-weight: 600;
+      color: var(--azul);
+      margin-right: 4px;
+    }
+
+    /* Contacto */
+    form {
+      display: grid;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    footer {
+      background-color: var(--azul);
+      color: var(--blanco);
+      padding: 18px 0;
+      font-size: 0.8rem;
+    }
+
+    footer .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    a.footer-link {
+      color: var(--blanco);
+      text-decoration: none;
+      margin-left: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .hero-inner,
+      .columns,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <img src="logo-ronsel.png" alt="Ronsel Correduría de Seguros">
+      <div>
+        <div class="logo-text">Ronsel</div>
+        <div class="logo-sub">Correduría de seguros</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#servicios">Seguros</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn btn-outline">Pedir presupuesto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Tranquilidad para hoy, seguridad para mañana.</h1>
+        <p>En Ronsel Correduría de Seguros te ayudamos a proteger lo que más te importa: tu familia, tu hogar, tu negocio y tu futuro. Trabajamos con distintas compañías para encontrar el seguro que mejor encaja contigo.</p>
+        <div class="hero-badges">
+          <span class="badge">Correduría independiente</span>
+          <span class="badge">Asesoramiento cercano</span>
+          <span class="badge">Gestión de siniestros</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#contacto" class="btn btn-primary">Quiero que me llaméis</a>
+          <a href="#servicios" class="btn btn-outline">Ver tipos de seguros</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h3>¿Qué podemos asegurar?</h3>
+        <ul>
+          <li>Automóviles, motos y flotas.</li>
+          <li>Vivienda, segunda residencia y alquiler.</li>
+          <li>Comunidades de propietarios.</li>
+          <li>Vida, salud, decesos y accidentes.</li>
+          <li>Empresas, autónomos y comercios.</li>
+          <li>Otros seguros: viaje, mascotas y más.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <h2>Seguros que trabajamos</h2>
+      <p class="section-intro">Buscamos entre distintas compañías para ofrecerte la solución que mejor se adapta a tus necesidades y presupuesto.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Automóvil</div>
+          <h3>Seguros de coche y moto</h3>
+          <p>Seguro a terceros, ampliado o todo riesgo para tu vehículo particular o de empresa. Revisamos coberturas claves como lunas, asistencia en viaje y vehículo de sustitución.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Hogar</div>
+          <h3>Seguros de vivienda</h3>
+          <p>Protege tu vivienda principal, tu segunda residencia o inmuebles en alquiler frente a daños, robo, responsabilidad civil y más.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Comunidades</div>
+          <h3>Comunidades de propietarios</h3>
+          <p>Soluciones completas para comunidades: daños en zonas comunes, RC, defensa jurídica, avería de maquinaria, cristales, etc.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Vida y salud</div>
+          <h3>Vida, accidentes y salud</h3>
+          <p>Diseñamos contigo un plan de protección para ti y tu familia: seguros de vida, accidentes, salud y decesos.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Empresas</div>
+          <h3>Empresas y autónomos</h3>
+          <p>Responsabilidad civil, comercios, pymes, industrias, oficinas, flotas y ciber-riesgos. Protege tu actividad con una visión global.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Otros seguros</div>
+          <h3>Y mucho más</h3>
+          <p>Seguros de viaje, alquiler, mascotas y otros productos específicos. Pregúntanos qué necesitas y lo estudiamos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS / POR QUÉ RONSEL -->
+  <section id="quienes-somos">
+    <div class="container columns">
+      <div>
+        <h2>Quiénes somos</h2>
+        <p class="section-intro" style="text-align:left;">Ronsel es una correduría de seguros independiente. Nuestro objetivo es sencillo: que tengas las coberturas que realmente necesitas, sin pagar de más y sin sorpresas.</p>
+        <p>Trabajamos con distintas compañías aseguradoras y comparamos por ti, para que no tengas que pelearte con la letra pequeña ni con diferentes comerciales.</p>
+      </div>
+      <div>
+        <h2 style="font-size:1.3rem; text-align:left;">Por qué elegirnos</h2>
+        <ul class="list-check">
+          <li>Correduría independiente: no estamos ligados a una sola compañía.</li>
+          <li>Trato cercano y directo, sin call centers impersonales.</li>
+          <li>Acompañamiento en la contratación y en la gestión de siniestros.</li>
+          <li>Experiencia trabajando con particulares, autónomos y empresas.</li>
+          <li>Búsqueda constante del mejor equilibrio entre precio y coberturas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section id="como-trabajamos">
+    <div class="container">
+      <h2>Cómo trabajamos</h2>
+      <p class="section-intro">Queremos que tengas claro en todo momento qué estás contratando y con quién cuentas cuando necesitas ayuda.</p>
+
+      <div class="columns">
+        <div>
+          <ul class="list-step">
+            <li><strong>Nos cuentas qué necesitas.</strong> Por teléfono, email o presencialmente te hacemos unas preguntas básicas para entender tu situación.</li>
+            <li><strong>Comparamos entre compañías.</strong> Estudiamos distintas opciones y filtramos las que realmente encajan con tu perfil.</li>
+            <li><strong>Te explicamos las alternativas.</strong> Sin tecnicismos innecesarios; solo lo importante para que tomes decisiones con tranquilidad.</li>
+            <li><strong>Te acompañamos siempre.</strong> Si tienes un siniestro o alguna duda, nos llamas a nosotros. Estamos para ayudarte.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>¿Tienes ya seguros contratados?</h3>
+          <p>Podemos revisar tus pólizas actuales para comprobar coberturas, detectar duplicidades y ver si es posible mejorar condiciones o precio.</p>
+          <p style="margin-top:8px;"><strong>Trae tus pólizas y las revisamos sin compromiso.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p class="section-intro">Déjanos tus datos y te llamaremos para ayudarte a encontrar el seguro que mejor encaja contigo.</p>
+
+      <form>
+        <div>
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="tipo">Tipo de seguro que te interesa</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona una opción</option>
+            <option>Automóvil</option>
+            <option>Hogar</option>
+            <option>Comunidad</option>
+            <option>Vida / salud / decesos</option>
+            <option>Empresa / autónomos</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+        </div>
+        <div style="text-align:center; margin-top:4px;">
+          <button type="submit" class="btn btn-primary">Enviar consulta</button>
+        </div>
+      </form>
+
+      <p style="text-align:center; margin-top:18px; font-size:0.85rem;">
+        Al enviar este formulario aceptas nuestra política de privacidad. Usaremos tus datos únicamente para responder a tu consulta.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© Ronsel Correduría de Seguros</div>
+    <div>
+      <!-- Rellena estos enlaces cuando tengáis los textos legales -->
+      <a href="#" class="footer-link">Aviso legal</a>
+      <a href="#" class="footer-link">Política de privacidad</a>
+      <a href="#" class="footer-link">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
