@@ -492,4 +492,122 @@
         <div class="card">
           <h3>¿Tienes ya seguros contratados?</h3>
           <p>Podemos revisar tus pólizas actuales para comprobar coberturas, detectar duplicidades y ver si es posible mejorar condiciones o precio.</p>
-          <p style="margin-top:8px;"><strong>Trae tus pólizas y las revisamos sin compromiso
+          <p style="margin-top:8px;"><strong>Trae tus pólizas y las revisamos sin compromiso.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p class="section-intro">Déjanos tus datos y te llamaremos para ayudarte a encontrar el seguro que mejor encaja contigo.</p>
+
+      <form>
+        <div>
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="tipo">Tipo de seguro que te interesa</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona una opción</option>
+            <option>Automóvil</option>
+            <option>Hogar</option>
+            <option>Comunidad</option>
+            <option>Vida / salud / decesos</option>
+            <option>Empresa / autónomos</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+        </div>
+        <div style="text-align:center; margin-top:4px;">
+          <button type="submit" class="btn btn-primary">Enviar consulta</button>
+        </div>
+      </form>
+
+      <p style="text-align:center; margin-top:18px; font-size:0.85rem;">
+        Al enviar este formulario aceptas nuestra política de privacidad. Usaremos tus datos únicamente para responder a tu consulta.
+      </p>
+    </div>
+  </section>
+
+  <!-- 📄 AVISOS LEGALES -->
+  <section id="legal">
+    <div class="container">
+      <h2>Aviso Legal</h2>
+      <p><strong>Titular del sitio web:</strong> Ronsel Correduría de Seguros</p>
+      <p><strong>Denominación social:</strong> [Nombre fiscal de la empresa]</p>
+      <p><strong>NIF/CIF:</strong> [NIF/CIF]</p>
+      <p><strong>Domicilio:</strong> [Dirección completa, Vigo]</p>
+      <p><strong>Email de contacto:</strong> [tu email de contacto]</p>
+      <p>El presente aviso legal regula el uso del sitio web. El acceso implica la aceptación de las condiciones de uso. No se permite el uso de los contenidos con fines ilícitos o comerciales sin autorización expresa.</p>
+      <p>Como correduría de seguros independiente, Ronsel actúa conforme a la normativa vigente de mediación y distribución de seguros, ofreciendo asesoramiento imparcial entre distintas compañías aseguradoras.</p>
+    </div>
+  </section>
+
+  <section id="privacidad">
+    <div class="container">
+      <h2>Política de Privacidad</h2>
+      <p><strong>Responsable del tratamiento:</strong> Ronsel Correduría de Seguros.</p>
+      <p><strong>Finalidad:</strong> Responder a las consultas realizadas a través del formulario de contacto y, en su caso, enviar información relacionada con productos de seguros que puedan ser de interés.</p>
+      <p><strong>Legitimación:</strong> Consentimiento del interesado al enviar el formulario.</p>
+      <p><strong>Conservación:</strong> Los datos se conservarán mientras exista relación comercial o el usuario no solicite su supresión.</p>
+      <p><strong>Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal o para la contratación de pólizas con entidades aseguradoras, previo consentimiento.</p>
+      <p><strong>Derechos:</strong> Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad enviando un correo a <strong>[tu email de contacto]</strong>. Asimismo, puedes presentar reclamación ante la Agencia Española de Protección de Datos si consideras que tus derechos han sido vulnerados.</p>
+    </div>
+  </section>
+
+  <section id="cookies">
+    <div class="container">
+      <h2>Política de Cookies</h2>
+      <p>Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para el correcto funcionamiento de la página y la mejora de la seguridad. No se utilizan cookies con fines publicitarios ni de analítica sin el consentimiento previo del usuario.</p>
+      <p>Puedes configurar tu navegador para bloquear o eliminar las cookies, aunque ello podría afectar al funcionamiento de ciertas partes del sitio web.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© Ronsel Correduría de Seguros</div>
+    <div>
+      <a href="#legal" class="footer-link">Aviso legal</a>
+      <a href="#privacidad" class="footer-link">Política de privacidad</a>
+      <a href="#cookies" class="footer-link">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp (cambia el número) -->
+<div class="whatsapp-float">
+  <a class="wa-btn" href="https://wa.me/34XXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+  <div class="wa-tooltip" id="wa-tooltip">¿Hablamos por WhatsApp?</div>
+</div>
+
+<script>
+  // Ocultar el texto de WhatsApp después de unos segundos
+  const waTooltip = document.getElementById('wa-tooltip');
+  if (waTooltip) {
+    setTimeout(() => {
+      waTooltip.style.display = 'none';
+    }, 5000); // 5 segundos
+  }
+</script>
+
+</body>
+</html>
