@@ -416,7 +416,6 @@
       .whatsapp-float {
         display: flex;   /* aquí se activa en móvil */
       }
-    }
 
     /* Secciones legales */
     #legal, #privacidad, #cookies {
@@ -670,24 +669,22 @@
     </div>
   </div>
 </footer>
-
+<!-- Botón flotante WhatsApp (cambia el número) -->
+<div class="whatsapp-float">
+  <a class="wa-btn" href="https://wa.me/34XXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+  <div class="wa-tooltip" id="wa-tooltip">¿Hablamos por WhatsApp?</div>
+</div>
   <script>
-  
-  const waTooltip = document.querySelector('.wa-tooltip');
+  // Ocultar el texto de WhatsApp después de unos segundos
+  const waTooltip = document.getElementById('wa-tooltip');
   if (waTooltip) {
     setTimeout(() => {
       waTooltip.style.display = 'none';
     }, 5000); // 5000 ms = 5 segundos
   }
-  </script>
+</script>
 
-<div class="whatsapp-float">
-  <a href="https://wa.me/34XXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
-    <span class="wa-icon">💬</span>
-  </a>
-  <div class="wa-tooltip">¿Hablamos por WhatsApp?</div>
-</div>
-
-  
 </body>
 </html>
