@@ -4,15 +4,8 @@
   <meta charset="UTF-8">
   <title>Ronsel Correduría de Seguros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ronsel Correduría de Seguros en Vigo. Especialistas en seguros de coche, hogar, comunidades, vida, salud y empresas. Asesoramiento independiente y trato cercano.">
-<meta name="keywords" content="seguros Vigo, correduría de seguros Vigo, seguros coche Vigo, seguros hogar Vigo, seguros comunidades, seguros vida, seguros salud, seguros empresas">
-<meta name="author" content="Ronsel Correduría de Seguros">
-<link rel="canonical" href="https://ronsel.netlify.app/">
-  <meta property="og:title" content="Ronsel Correduría de Seguros">
-  <meta property="og:description" content="Correduría de seguros independiente en [tu zona/ciudad], especializada en seguros de automóvil, hogar, comunidades, vida, salud y empresas.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ronsel.netlify.app/">
-  <link rel="icon" href="/favicon.ico">
+  <meta name="description" content="Ronsel Correduría de Seguros en Vigo. Especialistas en seguros de automóvil, hogar, comunidades, vida, salud y empresas. Asesoramiento independiente y trato cercano.">
+  <meta name="author" content="Ronsel Correduría de Seguros">
   <style>
     :root {
       --azul: #1f3a4a;
@@ -39,7 +32,7 @@
       border-bottom: 1px solid #dde3ea;
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 10;
     }
 
     .container {
@@ -101,37 +94,6 @@
     .btn-primary:hover,
     .btn-outline:hover {
       opacity: 0.9;
-    }
-
-    /* Botón menú móvil */
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: var(--azul);
-    }
-
-    .mobile-nav {
-      display: none;
-      background-color: var(--blanco);
-      border-top: 1px solid #dde3ea;
-    }
-
-    .mobile-nav a {
-      display: block;
-      padding: 10px 16px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      color: var(--gris);
-      border-bottom: 1px solid #edf2f7;
-    }
-
-    .mobile-nav a:hover {
-      background-color: var(--azul-claro);
-    }
-
-    .mobile-nav.show {
-      display: block;
     }
 
     /* Hero */
@@ -331,13 +293,13 @@
       margin-left: 12px;
     }
 
-/* Botón flotante WhatsApp */
+    /* Botón flotante WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 40;
-      display: none;            /* por defecto oculto (solo móvil) */
+      display: none; /* solo en móvil */
       align-items: center;
       gap: 8px;
     }
@@ -351,7 +313,7 @@
       justify-content: center;
       background-color: #25D366;
       color: #ffffff;
-      text-decoration: none;    /* 🔹 SIN subrayado */
+      text-decoration: none;
       font-size: 26px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
@@ -366,36 +328,8 @@
       max-width: 180px;
     }
 
-    /* Banner cookies */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(31,58,74,0.97);
-      color: #ffffff;
-      padding: 10px 16px;
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      z-index: 30;
-    }
-
-    .cookie-banner button {
-      border: none;
-      border-radius: 999px;
-      padding: 6px 14px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      background: #ffffff;
-      color: var(--azul);
-      font-weight: 600;
-    }
-
     /* Responsive */
-@media (max-width: 800px) {
+    @media (max-width: 800px) {
       nav {
         display: none;
       }
@@ -410,14 +344,10 @@
         grid-template-columns: 1fr;
       }
 
-      .cookie-banner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .whatsapp-float {
-        display: flex;   /* aquí se activa en móvil */
+        display: flex; /* se muestra solo en móvil */
       }
+    }
 
     /* Secciones legales */
     #legal, #privacidad, #cookies {
@@ -447,17 +377,8 @@
       <a href="#contacto">Contacto</a>
       <a href="#contacto" class="btn btn-outline">Pedir presupuesto</a>
     </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
   </div>
 </header>
-
-<!-- Menú móvil -->
-<div class="mobile-nav" id="mobile-nav">
-  <a href="#servicios">Seguros</a>
-  <a href="#quienes-somos">Quiénes somos</a>
-  <a href="#como-trabajamos">Cómo trabajamos</a>
-  <a href="#contacto">Contacto</a>
-</div>
 
 <main>
 
@@ -537,7 +458,7 @@
     <div class="container columns">
       <div>
         <h2>Quiénes somos</h2>
-        <p class="section-intro" style="text-align:left;">Ronsel es una correduría de seguros independiente. Nuestro objetivo es sencillo: que tengas las coberturas que realmente necesitas, sin pagar de más y sin sorpresas.</p>
+        <p class="section-intro" style="text-align:left;">Ronsel es una correduría de seguros independiente con sede en Vigo. Nuestro objetivo es sencillo: que tengas las coberturas que realmente necesitas, sin pagar de más y sin sorpresas.</p>
         <p>Trabajamos con distintas compañías aseguradoras y comparamos por ti, para que no tengas que pelearte con la letra pequeña ni con diferentes comerciales.</p>
       </div>
       <div>
@@ -571,87 +492,4 @@
         <div class="card">
           <h3>¿Tienes ya seguros contratados?</h3>
           <p>Podemos revisar tus pólizas actuales para comprobar coberturas, detectar duplicidades y ver si es posible mejorar condiciones o precio.</p>
-          <p style="margin-top:8px;"><strong>Trae tus pólizas y las revisamos sin compromiso.</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p class="section-intro">Déjanos tus datos y te llamaremos para ayudarte a encontrar el seguro que mejor encaja contigo.</p>
-
-      <!-- Formulario con Netlify -->
-      <form name="contacto" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contacto">
-        <div>
-          <label for="nombre">Nombre y apellidos</label>
-          <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div>
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required>
-        </div>
-        <div>
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <div>
-          <label for="tipo">Tipo de seguro que te interesa</label>
-          <select id="tipo" name="tipo">
-            <option value="">Selecciona una opción</option>
-            <option>Automóvil</option>
-            <option>Hogar</option>
-            <option>Comunidad</option>
-            <option>Vida / salud / decesos</option>
-            <option>Empresa / autónomos</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div>
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
-        </div>
-        <div style="text-align:center; margin-top:4px;">
-          <button type="submit" class="btn btn-primary">Enviar consulta</button>
-        </div>
-      </form>
-
-      <p style="text-align:center; margin-top:18px; font-size:0.85rem;">
-        Al enviar este formulario aceptas nuestra política de privacidad. Usaremos tus datos únicamente para responder a tu consulta.
-      </p>
-    </div>
-  </section>
-
-  <!-- 📄 AVISOS LEGALES -->
-  <section id="legal">
-    <div class="container">
-      <h2>Aviso Legal</h2>
-      <p><strong>Titular del sitio web:</strong> Ronsel Correduría de Seguros</p>
-      <p><strong>Denominación social:</strong> [Nombre fiscal de la empresa]</p>
-      <p><strong>NIF/CIF:</strong> [NIF/CIF]</p>
-      <p><strong>Domicilio:</strong> [Dirección completa]</p>
-      <p><strong>Email de contacto:</strong> [tu email de contacto]</p>
-      <p>El presente aviso legal regula el uso del sitio web. El acceso implica la aceptación de las condiciones de uso. No se permite el uso de los contenidos con fines ilícitos o comerciales sin autorización expresa.</p>
-      <p>Como correduría de seguros independiente, Ronsel actúa conforme a la normativa vigente de mediación y distribución de seguros, ofreciendo asesoramiento imparcial entre distintas compañías aseguradoras.</p>
-    </div>
-  </section>
-
-  <section id="privacidad">
-    <div class="container">
-      <h2>Política de Privacidad</h2>
-      <p><strong>Responsable del tratamiento:</strong> Ronsel Correduría de Seguros.</p>
-      <p><strong>Finalidad:</strong> Responder a las consultas realizadas a través del formulario de contacto y, en su caso, enviar información relacionada con productos de seguros que puedan ser de interés.</p>
-      <p><strong>Legitimación:</strong> Consentimiento del interesado al enviar el formulario.</p>
-      <p><strong>Conservación:</strong> Los datos se conservarán mientras exista relación comercial o el usuario no solicite su supresión.</p>
-      <p><strong>Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal o para la contratación de pólizas con entidades aseguradoras, previo consentimiento.</p>
-      <p><strong>Derechos:</strong> Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad enviando un correo a <strong>[tu email de contacto]</strong>. Asimismo, puedes presentar reclamación ante la Agencia Española de Protección de Datos si consideras que tus derechos han sido vulnerados.</p>
-    </div>
-  </section>
-
-  <section id="cookies">
-    <div class="container">
-      <h2>Política de Cookies</h2>
-      <p>Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para el correcto funcionamiento de la página y la mejora de la seguridad. No se utilizan cookies con fines publicitarios ni de analítica sin el consentimie
+          <p style="margin-top:8px;"><strong>Trae tus pólizas y las revisamos sin compromiso
