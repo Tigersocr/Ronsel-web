@@ -683,14 +683,23 @@
   </div>
 </footer>
 
+  <script>
+  
+  const waTooltip = document.querySelector('.wa-tooltip');
+  if (waTooltip) {
+    setTimeout(() => {
+      waTooltip.style.display = 'none';
+    }, 5000); // 5000 ms = 5 segundos
+  }
+  </script>
 
-<!-- Botón flotante WhatsApp -->
 <div class="whatsapp-float">
   <a href="https://wa.me/34XXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
-    <span class="wa-icon">WA</span>
+    <span class="wa-icon">💬</span>
   </a>
   <div class="wa-tooltip">¿Hablamos por WhatsApp?</div>
 </div>
 
+  
 </body>
 </html>
