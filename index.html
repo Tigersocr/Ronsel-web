@@ -5,14 +5,10 @@
   <title>Ronsel Correduría de Seguros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ronsel Correduría de Seguros en Vigo. Especialistas en seguros de coche, hogar, comunidades, vida, salud y empresas. Asesoramiento independiente y trato cercano.">
-<meta name="keywords" content="seguros Vigo, correduría de seguros Vigo, seguros coche Vigo, seguros hogar Vigo, seguros comunidades, seguros vida, seguros salud, seguros empresas">
-<meta name="author" content="Ronsel Correduría de Seguros">
-<link rel="canonical" href="https://ronsel.netlify.app/">
-  <meta property="og:title" content="Ronsel Correduría de Seguros">
-  <meta property="og:description" content="Correduría de seguros independiente en [tu zona/ciudad], especializada en seguros de automóvil, hogar, comunidades, vida, salud y empresas.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ronsel.netlify.app/">
-  <link rel="icon" href="/favicon.ico">
+  <meta name="keywords" content="seguros Vigo, correduría de seguros Vigo, seguros coche Vigo, seguros hogar Vigo, seguros comunidades, seguros vida, seguros salud, seguros empresas">
+  <meta name="author" content="Ronsel Correduría de Seguros">
+  <link rel="canonical" href="https://ronsel-web.vercel.app/">
+
   <style>
     :root {
       --azul: #1f3a4a;
@@ -331,7 +327,7 @@
       margin-left: 12px;
     }
 
-/* Botón flotante WhatsApp */
+    /* Botón flotante WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -351,7 +347,7 @@
       justify-content: center;
       background-color: #25D366;
       color: #ffffff;
-      text-decoration: none;    /* 🔹 SIN subrayado */
+      text-decoration: none;
       font-size: 26px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
@@ -395,9 +391,13 @@
     }
 
     /* Responsive */
-@media (max-width: 800px) {
+    @media (max-width: 800px) {
       nav {
         display: none;
+      }
+
+      .menu-toggle {
+        display: block;
       }
 
       .hero {
@@ -418,6 +418,7 @@
       .whatsapp-float {
         display: flex;   /* aquí se activa en móvil */
       }
+    }
 
     /* Secciones legales */
     #legal, #privacidad, #cookies {
@@ -583,57 +584,50 @@
       <h2>Contacto</h2>
       <p class="section-intro">Déjanos tus datos y te llamaremos para ayudarte a encontrar el seguro que mejor encaja contigo.</p>
 
-      <!-- Formulario  -->
+      <!-- Formulario -->
       <form action="https://formsubmit.co/Iago.ortega@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="https://ronsel-web.vercel.app/gracias.html">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_subject" value="Nueva solicitud desde la web Ronsel">
+        <input type="hidden" name="_next" value="https://ronsel-web.vercel.app/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nueva solicitud desde la web Ronsel">
 
-  <div>
-    <label for="nombre">Nombre y apellidos</label>
-    <input type="text" id="nombre" name="nombre" required>
-  </div>
+        <div>
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
 
-  <div>
-    <label for="telefono">Teléfono</label>
-    <input type="tel" id="telefono" name="telefono" required>
-  </div>
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
 
-  <div>
-    <label for="email">Correo electrónico</label>
-    <input type="email" id="email" name="email">
-  </div>
+        <div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email">
+        </div>
 
-  <div>
-    <label for="tipo">Tipo de seguro que te interesa</label>
-    <select id="tipo" name="tipo">
-      <option value="">Selecciona una opción</option>
-      <option>Automóvil</option>
-      <option>Hogar</option>
-      <option>Comunidad</option>
-      <option>Vida / salud / decesos</option>
-      <option>Empresa / autónomos</option>
-      <option>Otro</option>
-    </select>
-  </div>
+        <div>
+          <label for="tipo">Tipo de seguro que te interesa</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecciona una opción</option>
+            <option>Automóvil</option>
+            <option>Hogar</option>
+            <option>Comunidad</option>
+            <option>Vida / salud / decesos</option>
+            <option>Empresa / autónomos</option>
+            <option>Otro</option>
+          </select>
+        </div>
 
-  <div>
-    <label for="mensaje">Mensaje</label>
-    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
-  </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+        </div>
 
-  <!-- Opciones ocultas -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_subject" value="Nueva solicitud desde la web Ronsel">
-
-  <div style="text-align:center; margin-top:4px;">
-    <button type="submit" class="btn btn-primary">Enviar consulta</button>
-  </div>
-
-</form>
-
+        <div style="text-align:center; margin-top:4px;">
+          <button type="submit" class="btn btn-primary">Enviar consulta</button>
+        </div>
+      </form>
 
       <p style="text-align:center; margin-top:18px; font-size:0.85rem;">
         Al enviar este formulario aceptas nuestra política de privacidad. Usaremos tus datos únicamente para responder a tu consulta.
@@ -670,5 +664,86 @@
   <section id="cookies">
     <div class="container">
       <h2>Política de Cookies</h2>
-      <p>Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para el correcto funcionamiento de la página y la mejora de la seguridad. No se utilizan cookies con fines publicitarios ni de analítica sin el consentimiento previo del usuar
-        
+      <p>Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para el correcto funcionamiento de la página y la mejora de la seguridad. No se utilizan cookies con fines publicitarios ni de analítica sin el consentimiento previo del usuario.</p>
+      <p>Puedes configurar tu navegador para bloquear o eliminar las cookies, aunque ello podría afectar al funcionamiento de ciertas partes del sitio web.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© Ronsel Correduría de Seguros</div>
+    <div>
+      <a href="#legal" class="footer-link">Aviso legal</a>
+      <a href="#privacidad" class="footer-link">Política de privacidad</a>
+      <a href="#cookies" class="footer-link">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp (cambia el número) -->
+<div class="whatsapp-float">
+  <a class="wa-btn" href="https://wa.me/34XXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
+    <!-- Icono tipo WhatsApp en SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+         viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92V21a1 1 0 0 1-1.09 1
+               19.79 19.79 0 0 1-8.63-3.07
+               19.5 19.5 0 0 1-6-6
+               A19.79 19.79 0 0 1 3 3.09
+               1 1 0 0 1 4 2h4.09
+               A1 1 0 0 1 9 2.72L10.12 5
+               a1 1 0 0 1-.27 1.11L9 7
+               a16 16 0 0 0 6 6l.88-.85
+               a1 1 0 0 1 1.11-.27L21.28 13
+               a1 1 0 0 1 .72.91z" />
+    </svg>
+  </a>
+  <div class="wa-tooltip" id="wa-tooltip">¿Hablamos por WhatsApp?</div>
+</div>
+
+<!-- Banner cookies -->
+<div class="cookie-banner" id="cookie-banner">
+  <span>Usamos cookies técnicas para que la web funcione correctamente. Más info en la Política de cookies.</span>
+  <button id="cookie-accept">Aceptar</button>
+</div>
+
+<script>
+  // Menú responsive
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+    });
+  }
+
+  // Banner de cookies simple
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieBtn = document.getElementById('cookie-accept');
+
+  if (cookieBanner && cookieBtn) {
+    if (localStorage.getItem('ronselCookiesAccepted') === 'yes') {
+      cookieBanner.style.display = 'none';
+    }
+
+    cookieBtn.addEventListener('click', () => {
+      localStorage.setItem('ronselCookiesAccepted', 'yes');
+      cookieBanner.style.display = 'none';
+    });
+  }
+
+  // Ocultar el texto de WhatsApp después de 5 segundos
+  const waTooltip = document.getElementById('wa-tooltip');
+  if (waTooltip) {
+    setTimeout(() => {
+      waTooltip.style.display = 'none';
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
